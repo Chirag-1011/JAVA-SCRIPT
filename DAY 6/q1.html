@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+
+    button {
+        height: 45px;
+        width: 150px;
+        border: 1px solid white;
+        background: transparent;
+        color: aliceblue;
+        cursor: pointer;
+        border-radius: 30px;
+        box-shadow: 0px 0px 10px 0px white;
+        transition: 0.5s;
+    }
+
+    input {
+        height: 45px;
+        width: 450px;
+        background: transparent;
+        border: 1px solid white;
+        border-radius: 40px;
+        padding-left: 40px;
+        border-radius: 30px;
+        color: aliceblue;
+        box-shadow: 0px 0px 10px 0px white;
+    }
+
+    button:hover {
+        border: 1px solid aqua;
+        box-shadow: 0px 0px 10px 0px aqua;
+        transform: scale(1.1);
+    }
+
+    h1 {
+        color: aliceblue;
+    }
+</style>
+
+<body>
+    <center><br><br>
+        <input type="text" name="" id="range1" placeholder="   Enter Starting Point"><br><br><br>
+        <input type="text" name="" id="range2" placeholder="   Enter Ending Point"><br><br><br>
+        <input type="text" name="" id="value" placeholder="   Enter Any Number"><br><br><br>
+
+        <button type="button" onclick="dc()">SUBMIT</button>
+        <h1 id="interest"></h1>
+        <h1 id="total"></h1>
+    </center>
+    <script src="q1.js"></script>
+</body>
+
+</html>
