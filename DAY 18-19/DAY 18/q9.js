@@ -1,9 +1,11 @@
 let ages = [10, 17, 26, 24, 30];
 
-let older;
+let older = 0;
 for (let a = 0; a <= 4; a++) {
 
-    older = ages[0] < ages[4];
+    if (ages[a] > 0) {
+        older = ages[a];
+    }
 }
 
 console.log(older);
