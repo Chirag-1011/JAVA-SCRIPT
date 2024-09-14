@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCYT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <center>
+        <form id="signup">
+
+            <h1>sign up</h1> <br>   
+
+            <input type="text" id="username" placeholder="user name"> <br>
+            <span id="usertext"></span><br>
+
+
+            <input type="text" id="email" placeholder="Email"><br>
+            <span id="emailtext"></span><br>
+
+
+            <input type="text" id="password" placeholder="Password"><br>
+            <span id="passtext"></span><br>
+            <input type="submit" style="cursor: pointer;"><br><br>
+
+
+
+            <p id="signuphide" style="cursor: pointer;">You already have an account</p>
+
+        </form>
+
+
+
+
+
+        <form id="login">
+
+            <h1>log in</h1> <br>   
+
+            <input type="text" id="logemail" placeholder="Email"><br>
+            <span id="emailtext"></span><br>
+
+
+            <input type="text" id="logpassword" placeholder="Password"><br>
+            <span id="passtext"></span><br>
+            <input type="submit" style="cursor: pointer;"><br><br>
+
+            <p id="loginhide" style="cursor: pointer;">You already have an account</p>
+
+        </form>
+    </center>
+
+    <script src="script.js"></script>
+
+    <script>
+
+        let d = document.querySelector("#signup")
+
+
+        let bb =[];
+
+        let Isvalid = true ;
+
+        d.addEventListener("submit",(e)=>{
+
+            e.preventDefault()
+
+            Isvalid = true;
+
+            document.querySelector("#usertext").innerHTML = ""
+            document.querySelector("#emailtext").innerHTML = ""
+            document.querySelector("#passtext").innerHTML = ""
+
+
+            let username = document.querySelector("#username").value
+            let email = document.querySelector("#email").value
+            let Password = document.querySelector("#password").value
+
+            if(username.length == 0){
+                document.querySelector("#usertext").innerHTML = "Invalid Username"
+                Isvalid == false
+            }
+
+            if(email.length == 0){
+                document.querySelector("#emailtext").innerHTML = "please enter valid email"
+                Isvalid == false
+            }
+
+            if(Password.length < 8){
+                document.querySelector("#passtext").innerHTML = "password must be greter than 8"
+                Isvalid == false
+            }
+
+            let obj = {
+                Username : username ,
+                Email : email ,
+                password : password 
+            }
+
+            if(Isvalid == true){
+                bb.push(obj);
+            }
+
+            console.log(bb);            
+        })
+
+
+
+            document.querySelector("#signuphide").addEventListener("click",()=>{
+
+                document.querySelector("#signup").style.display = "none"
+                document.querySelector("#login").style.display = "block"
+
+            })
+
+            document.querySelector("#loginhide").addEventListener("click",()=>{
+
+                document.querySelector("#signup").style.display = "block"
+                document.querySelector("#login").style.display = "none"
+
+            })
+
+
+            let dc = document.querySelector("#login").addEventListener("submit",(eee)=>{
+
+                eee.preventDefault()
+
+                let Logemail = document.querySelector("#logemail").value
+                let LogPassword = document.querySelector("#logpassword").value
+
+
+                let sub = bb.filter((el)=>{
+
+                    if(el.Email == Logmail && el.password == LogPassword) {
+                        return el
+                    }
+                })
+
+                console.log(sub);
+                
+
+                if(sub.length < 0){
+                    alert("Log in successfull");
+                }
+                else{
+                    alert("Log in Unsuccessfull");
+                }
+                
+            })
+
+    </script>
+</body>
+
+</html>
