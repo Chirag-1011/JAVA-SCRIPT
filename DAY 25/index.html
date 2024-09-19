@@ -135,15 +135,16 @@
 
                 let sub = bb.filter((el)=>{
 
-                    if(el.Email == Logmail && el.password == LogPassword) {
+                    if(el.Email == Logemail && el.password == LogPassword) {
                         return el
                     }
                 })
+                
 
                 console.log(sub);
                 
 
-                if(sub.length < 0){
+                if(sub.length > 0){
                     alert("Log in successfull");
                 }
                 else{
