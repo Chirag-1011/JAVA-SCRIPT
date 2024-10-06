@@ -1,0 +1,76 @@
+{
+  "product": [
+    {
+      "id": "1",
+      "img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/489b06f3-42b4-45a2-aa75-4cfb16ac2e71/NIKE+COURT+VISION+LO+NN.png",
+      "title": "Nike Court Vision Low Next Nature",
+      "for": "Men's Shoes",
+      "MRP": 4995
+    },
+    {
+      "id": "2",
+      "img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/06e56a5c-8b98-4788-81ac-d7294c9975a5/NIKE+AIR+MAX+ISHOD.png",
+      "title": "Nike Air Max Ishod",
+      "for": "Men's Shoes",
+      "MRP": 9207
+    },
+    {
+      "id": "3",
+      "img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d5ce757d-d5c9-430a-a10a-fc80e98ad645/NIKE+REAX+8+TR+MESH.png",
+      "title": "Nike Reax 8 TR",
+      "for": "Men's Workout Shoes",
+      "MRP": 7117
+    },
+    {
+      "id": "4",
+      "img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d6242443-257d-40af-8f4f-deba3d496eb5/NIKE+DUNK+LOW+RETRO.png",
+      "title": "Nike Dunk Low Retro",
+      "for": "Men's Shoes",
+      "MRP": 8257
+    },
+    {
+      "id": "5",
+      "img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/e7c9aadd-242a-4dd4-8509-6ddf9645525e/AIR+JORDAN+1+RETRO+HIGH+OG.png",
+      "title": "Air Jordan 1 Retro High OG",
+      "for": "Men's Shoes",
+      "MRP": 16147
+    },
+    {
+      "id": "6",
+      "img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/4696e1a5-e03e-4e70-8b0f-5bf9f1b2d17d/JORDAN+JUMPMAN+SLIDE.png",
+      "title": "Jordan Jumpman",
+      "for": "Men's Shoes",
+      "MRP": 3037
+    },
+    {
+      "id": "7",
+      "img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/9a738073-ff5f-415e-99e4-0a35b9337e0f/NIKE+MOTIVA.png",
+      "title": "Nike Motiva",
+      "for": "Men's Walking Shoes",
+      "MRP": 9207
+    },
+    {
+      "id": "8",
+      "img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/939f8560-1646-422b-b271-ec1891e9148e/JORDAN+ONE+TAKE+5+PF.png",
+      "title": "Jordan One Take 5 PF",
+      "for": "Men's Shoes",
+      "MRP": 8257
+    },
+    {
+      "id": "9",
+      "img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/85057772-9c48-4c70-a4f5-75d110251e1d/NIKE+COURT+VISION+LO+NN+ESS.png",
+      "title": "Nike Court Vision Low Next Nature",
+      "for": "Men's Shoes",
+      "MRP": 6737
+    }
+  ],
+  "cart": [
+    {
+      "id": "1",
+      "img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/489b06f3-42b4-45a2-aa75-4cfb16ac2e71/NIKE+COURT+VISION+LO+NN.png",
+      "title": "Nike Court Vision Low Next Nature",
+      "for": "Men's Shoes",
+      "MRP": 4995
+    }
+  ]
+}
