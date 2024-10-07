@@ -1,4 +1,4 @@
-fetch(`http://localhost:3000/cart`)
+fetch(`https://online-api-2.onrender.com/cart`)
     .then((res)=>{
         return res.json()
     })
@@ -31,7 +31,7 @@ return arr.map((el)=>{
 function dcyt(id){
 
 
-    fetch(`http://localhost:3000/cart/${id}`,{
+    fetch(`https://online-api-2.onrender.com/cart${id}`,{
         method:"DELETE",
     })
     .then((res)=>{

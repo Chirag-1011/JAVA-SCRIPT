@@ -1,7 +1,7 @@
 function FetchingData() {
     let data = new URLSearchParams(window.location.search)
     let id = data.get("id")
-    fetch(`http://localhost:3000/product?id=${id}`)
+    fetch(`https://online-api-2.onrender.com/product?id=${id}`)
         .then((res) => {
             return res.json()
         })
@@ -17,7 +17,7 @@ function FetchingData() {
 }
 
 function addToCart(res) {
-    fetch(`http://localhost:3000/cart?id=${res[0].id}`)
+    fetch(`https://online-api-2.onrender.com/cart?id=${res[0].id}`)
         .then((res) => {
             return res.json()
         })
@@ -33,7 +33,7 @@ function addToCart(res) {
 
 
             } else {
-                fetch(`http://localhost:3000/cart`, {
+                fetch(`https://online-api-2.onrender.com/cart`, {
                     method: "POST",
                     headers: {
                         'Content-Type': "application/json"
