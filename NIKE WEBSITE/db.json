@@ -66,11 +66,11 @@
   ],
   "cart": [
     {
-      "id": "1",
-      "img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/489b06f3-42b4-45a2-aa75-4cfb16ac2e71/NIKE+COURT+VISION+LO+NN.png",
-      "title": "Nike Court Vision Low Next Nature",
-      "for": "Men's Shoes",
-      "MRP": 4995
+      "id": "3",
+      "img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d5ce757d-d5c9-430a-a10a-fc80e98ad645/NIKE+REAX+8+TR+MESH.png",
+      "title": "Nike Reax 8 TR",
+      "for": "Men's Workout Shoes",
+      "MRP": 7117
     }
   ]
 }

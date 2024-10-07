@@ -22,8 +22,20 @@ return arr.map((el)=>{
                     <p id="title1">${el.for}</p>
                     <p id="price">₹ ${el.MRP}</p>
                 </div>
-                <button id="butt">DELETe</button>
+                <button onclick="dcyt(${el.id})" id="butt">DELETe</button>
             </div>`
 }).join("")
+
+}
+
+function dcyt(id){
+
+
+    fetch(`http://localhost:3000/cart/${id}`,{
+        method:"DELETE",
+    })
+    .then((res)=>{
+        return res.json();
+    })
 
 }

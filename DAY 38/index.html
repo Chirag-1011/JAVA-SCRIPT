@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+            background-color: black;
+        }
+        #box{
+            margin-top: 200px;
+            margin-left: 700px;
+            height: 500px;
+            width: 500px;
+            border-radius: 20px;
+            /* border: 1px solid white; */
+            box-shadow: 0px 0px 20px 1px white;
+        }
+        #butt{
+            height: 45px;
+            width: 150px;
+            color: white;
+            cursor: pointer;
+            margin-left: 880px;
+            margin-top: 50px;
+            border: 1px solid white;
+
+        }
+        #img{
+            border-radius: 20px;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">
+
+    </div>
+    <button id="butt">Change</button> 
+
+          
+
+</body>
+
+<script>
+
+    document.querySelector("#butt").addEventListener("click",()=>{
+    
+        fetch(`https://dog.ceo/api/breeds/image/random`)
+    .then((res)=>{
+        return res.json()
+    })
+    .then((Res)=>{
+
+        document.querySelector("#box").innerHTML = view(Res)
+        console.log(Res);
+        
+    })
+    .catch((Err)=>{
+        console.log(Err)
+    })
+        
+    })
+
+    function view(arr){
+    
+            return `<img id ="img" src ="${arr.message}"/>`
+    
+    }
+
+</script>
+</html>
