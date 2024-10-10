@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calander.css">
+</head>
+
+<body>
+    <div class="a"><br><br><br><br><br><br>
+        <div class="aa">
+            <input type="text" id="city" placeholder="City">
+            <button id="submitbut">Submit</button>
+
+        </div>
+        <div class="b">
+            <div class="box">
+                <div class="container">
+                    <div id="dycalendar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="c">
+            <div id="box"></div>
+        </div>
+        <div class="d">
+            <div id="box"></div>
+        </div>
+        <h1>STAYING ONE STEP AHEAD</h1>
+        <h2>UNDERSTANDING TOMORROW'S WETHER</h2>
+    </div>
+</body>
+
+<script>
+
+    document.querySelector("#submitbut").addEventListener("click", () => {
+
+        let city = document.querySelector("#city").value
+
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f32d0ea409d44b88830da30fdaee87c2&units=metric`)
+            .then((res) => {
+                return res.json()
+            })
+            .then((Res) => {
+                document.querySelector("#box").innerHTML = dc(Res)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+
+    })
+
+
+    function dc(arr) {
+        return `<p id="cel"> temp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${arr.main.temp} c</p>
+                <p id="maxtemp">maxtemp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${arr.main.temp_max}</p>
+                <p id="mintemp">mintemp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${arr.main.temp_min}</p>
+                <img id="img" src="https://openweathermap.org/img/wn/${arr.weather[0].icon}@2x.png" id="img">
+                `
+    }
+
+
+</script>
+
+<script src="calander.js"></script>
+
+</html>

@@ -1,0 +1,131 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.a {
+    height: 100vh;
+    width: 100%;
+    background-image: url(cloudy-weather-with-sunset-8nqclio6o0ue7mz2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+input {
+    margin-left: 50px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid white;
+    color: white;
+    margin-top: 50px;
+    padding-right: 10px;
+    border-radius: 5px;
+    background: transparent;
+}
+::placeholder{
+    color: white;
+}
+button{
+    height: 35px;
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: white;
+}
+.aa {
+    height: 150px;
+    background: #252339;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(25px);
+    width: 400px;
+    margin-left: 250px;
+    border-radius: 20px;
+    opacity: 50%;
+}
+.b {
+    position: absolute;
+    left: 700px;
+    top: 116px;
+    height: 400px;
+    background: #252339;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(25px);
+    width: 700px;
+    margin-left: 250px;
+    border-radius: 20px;
+    opacity: 50%;
+}
+.c{
+    position: absolute;
+    left: 1100px;
+    top: 605px;
+    height: 200px;
+    background: #252339;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(25px);
+    width: 300px;
+    margin-left: 250px;
+    border-radius: 20px;
+    opacity: 50%;
+}
+h1{
+    margin-top: 590px;
+    margin-left: 240px;
+    opacity: 50%;
+    font-size: 45px;
+    color: aliceblue;
+}
+h2{
+    margin-top: 450px;
+    margin-left: 335px;
+    opacity: 50%;
+    color: aliceblue;
+}
+#box{
+    position: relative;
+}
+#cel{
+    color: aliceblue;
+    font-size: 25px;
+    position: absolute;
+    left: 35px;
+    top: 35px;
+}
+#maxtemp{
+    color: aliceblue;
+    font-size: 25px;
+    position: absolute;
+    left: 35px;
+    top: 85px;
+}
+#mintemp{
+    color: aliceblue;
+    font-size: 25px;
+    position: absolute;
+    left: 35px;
+    top: 135px;
+}
+
+.d{
+    position: absolute;
+    left: 750px;
+    top: 605px;
+    height: 200px;
+    background: #252339;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(25px);
+    width: 300px;
+    margin-left: 250px;
+    border-radius: 20px;
+    opacity: 50%;
+}
+#img{
+    left: -300px;
+    top: -10px;
+    height: 200px;
+    position: absolute;
+}
