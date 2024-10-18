@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+
+        div {
+            border: 1px solid white;
+            width: 300px;
+            border-radius: 10px;
+            height: 420px;
+            margin-left: 800px;
+            margin-top: 200px;
+            padding: 30px;
+        }
+
+        input {
+            padding: 20px;
+            background: transparent;
+            border: 1px solid white;
+            border-radius: 10px;
+            width: 80%;
+            color: aliceblue;
+        }
+
+        ::placeholder {
+            color: aliceblue;
+        }
+
+        button {
+            width: 50%;
+            height: 50px;
+            margin-left: 70px;
+            margin-top: 10px;
+            background: transparent;
+            color: aliceblue;
+            border: 1px solid white;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px 1px white;
+        }
+
+        a {
+            margin-left: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form action="">
+            <input type="text" id="id" placeholder="Enter food id"><br><br>
+            <input type="text" id="image" placeholder="enter image url"> <br><br>
+            <input type="text" id="name" placeholder="foodname"><br><br>
+            <input type="text" id="discription" placeholder="discription"><br><br>
+            <button id="sub">submit</button><br><br><br>
+
+        </form>
+
+
+        <a href="singleproduct.html">go to food page</a>
+
+    </div>
+
+    <script src="script.js"></script>
+
+
+    <script>
+
+        document.querySelector("#sub").addEventListener("click", () => {
+
+            let Id = document.querySelector("#id").value;
+
+            let img = document.querySelector("#image").value;
+
+            let item = document.querySelector("#name").value;
+
+            let des = document.querySelector("#discription").value;
+
+
+            let valid = true
+
+            if (img.length == 0) {
+                alert("please enter details...")
+            }
+
+
+            else if (item.length == 0) {
+                alert("please enter details...")
+            }
+
+            else if (des.length == 0) {
+                alert("please enter details...")
+            }
+
+            let obj = {
+                images: img,
+                itemname: item,
+                discription: des,
+                id: Id
+            }
+
+
+            fetch(`http://localhost:3000/product`, {
+                method: "POST",
+                headers: {
+                    "content-type": "application/json"
+                },
+                body: JSON.stringify(obj)
+            })
+                .then((res) => {
+                    return res.json()
+                })
+                .then((Res) => {
+                    console.log(Res)
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
+
+        })
+    </script>
+</body>
+
+</html>

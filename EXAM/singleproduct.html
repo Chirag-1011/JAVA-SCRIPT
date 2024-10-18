@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #box{
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border: 1px solid white;
+        }
+        #main{
+            height: 460px;
+            width: 300px;
+            padding: 20px;
+            margin-bottom: 20px ;
+            border: 1px solid white;
+        }
+        img {
+            height: 300px;
+            width: 300px;
+        }
+
+        #delete {
+            margin-left: 90px;
+            cursor: pointer;
+        }
+        p{
+            font-size: 20px;
+            color: white;
+        }
+        button{
+            margin-left: 20px;
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+            height: 45px;
+            width: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+
+
+
+
+    <script>
+
+        function fetchdata(){
+
+            fetch(`http://localhost:3000/product`)
+            .then((res) => {
+                return res.json()
+            })
+            .then((Res) => {
+                document.querySelector("#box").innerHTML = view(Res)
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+
+        }
+        fetchdata()
+
+       
+
+        function deletedata(id) {
+
+            fetch(`http://localhost:3000/product/${id}`,{
+                method : "DELETE",     
+            })  
+            // .then((res) => {
+                    // return res.json()
+                // })
+                // .then((Res) => {
+                    // document.querySelector("#box").innerHTML = view(Res)       
+                // })
+                // .catch((err) => {
+                    // console.log(err)
+                // })
+        }
+
+       
+        // deletedata(id)        
+
+
+        function view(arr) {
+            return arr.map((el) => {
+                return `
+
+             <div id="main">   
+    <div>
+        <img src="${el.images}" alt="">
+    </div>
+    <div>
+        <p>${el.itemname}</p>
+        <p>${el.discription}</p>
+    </div>
+    <button id = "delete" onclick = "deletedata(${el.id})">DELETE</button>
+                </div>
+                `
+            }).join(" ")
+
+           
+        }
+
+
+    </script>
+</body>
+
+</html>
